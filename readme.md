@@ -1,6 +1,6 @@
 # Sera-DI
 
-## Dowdload
+## Download
 A Dataset for GPU Soft Error Resilience Assessment across Diverse Inputs. ***Sera-DI*** is available for download at [Sera-DI](https://drive.google.com/file/d/1ar3go8fFTCCM8Q9HqIi4fuheWef4yNcL/view?usp=drive_link "悬停显示").
 
 # IASCM
@@ -21,4 +21,6 @@ scikit-learn 1.6.1
 torch 2.1.0
 
 ## Run
-python /code_script/IASCM.py
+1. download ***Sera-DI***
+
+2. python /code_script/IASCM.py
