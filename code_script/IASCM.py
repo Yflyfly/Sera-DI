@@ -15,11 +15,12 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 # ============ 超参数配置 ============
 RANDOM_SEED = 42
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 LEARNING_RATE = 1e-3
 EPOCHS = 30
 NUM_LAYERS = 1
 DROPOUT = 0.2
+NUM_CLASSES = 3
 TRAIN_SIZES = [15000]
 
 
@@ -413,10 +414,6 @@ def main(num_epochs=10, num_layers=2, train_size=15000, PROGRAM_NAME="2mm"):
     node_embed = torch.tensor(loaded_embeddings, dtype=torch.float32).to(device)
 
     d_model = loaded_embeddings.shape[1]
-    if PROGRAM_NAME == "lud":
-        NUM_CLASSES = 2
-    else:
-        NUM_CLASSES = 3
 
     model = MultiRelationGraphTransformer(
         d_model=d_model,
